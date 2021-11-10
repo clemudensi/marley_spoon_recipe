@@ -1,0 +1,10 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+.idea/
+.vscode
+
+node_modules
+
+# frontend app
+/marley_spoon_recipe/node_modules
+
+.DS_Store
