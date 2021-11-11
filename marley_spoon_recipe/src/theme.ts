@@ -36,17 +36,18 @@ const theme = createTheme({
 	},
 	typography: {
 		fontSize: 16,
+		fontFamily: 'Roboto", Helvetica, Arial, sans-serif',
 		body1: {
 				fontSize: '1rem',
 		},
 		h1: {
-				fontSize: '2.125rem', // 34px
+				fontSize: '2.5rem', // 34px
 		},
 		h2: {
-				fontSize: '1.75rem', // 28px
+				fontSize: '2rem', // 28px
 		},
 		h3: {
-				fontSize: '1.375rem', // 22px
+				fontSize: '1.725rem', // 22px
 		},
 		h4: {
 				fontSize: '1.25rem', // 20px

@@ -21,34 +21,34 @@ interface RecipeFields {
                 }
                 fileName: string;
                 url: string;
-            }
-        }
+            };
+        };
         metadata?: {
-            tags: []
-        }
-    }
+            tags: [];
+        };
+    };
 }
 
 interface Recipe {
     fields: RecipeFields;
     metadata?: {
-        tags: []
+        tags: [];
     };
     sys: {
         id: string;
-    }
+    };
 }
 
 interface RecipeResponse {
     includes?: {
-        Entry: [],
-        Asset: [],
+        Entry: [];
+        Asset: [];
     };
     items: Recipe[];
     limit?: number;
     skip?: number;
     sys?: [];
-    total?: number
+    total?: number;
 }
 
 export type { Recipe, RecipeFields, RecipeResponse };

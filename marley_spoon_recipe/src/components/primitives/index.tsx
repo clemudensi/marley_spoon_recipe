@@ -23,6 +23,18 @@ const RecipeTitle = styled.a`
     };
 `;
 
+const RecipeDetailTitle = styled(Typography).attrs(() => ({ variant: 'h3' }))`
+    font-weight: 800;
+    margin-bottom: ${({ theme }) => theme.spacing(1)};
+    display: block;
+    padding-bottom: ${({ theme }) => theme.spacing(1)};
+`;
+
+const RecipeDetailText = styled(Typography).attrs(() => ({ variant: 'h4' }))`
+    margin-bottom: ${({ theme }) => theme.spacing(1)};
+    display: block;
+`;
+
 const RecipeSubTitle = styled.a`
     color: #413B38;
     font-weight: 300;
@@ -39,7 +51,8 @@ const RecipeDetailSubTitle = styled(Typography).attrs(() => ({ variant: 'h4' }))
     font-weight: 500;
     margin-bottom: ${({ theme }) => theme.spacing(1)};
     line-height: 1.3;
-    color: #E9E7E6;
+    color: #828282;
+    padding-bottom: ${({ theme }) => theme.spacing(1)};
 `;
 
 const TagBadge = styled.a`
@@ -50,16 +63,29 @@ const TagBadge = styled.a`
     &:hover {
         color: #28B88D;
     };
-    background-color: #e9e7e6;
+    background-color: #E9E7E6;
     max-width: fit-content;
     padding: ${({ theme }) => theme.spacing(0.5)};
     display: inline-flex;
-    margin: 1rem .5rem 0 0
-;
+    margin: 1rem .5rem 2rem 0;
+`;
+
+const RecipeDetailBadge = styled.div`
+    color: #413B38;
+    font-weight: 300;
+    font-size: 1rem;
+    background-color: #E9E7E6;
+    max-width: fit-content;
+    padding: ${({ theme }) => theme.spacing(0.5)};
+    display: inline-flex;
+    margin: 1rem .5rem 2rem 0;
 `;
 
 export {
+    RecipeDetailBadge,
     RecipeDetailSubTitle,
+    RecipeDetailText,
+    RecipeDetailTitle,
     RecipeSubTitle,
     RecipeTitle,
     TagBadge,

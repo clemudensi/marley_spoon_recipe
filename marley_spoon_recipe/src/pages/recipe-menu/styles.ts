@@ -4,8 +4,8 @@ import { Container } from '@mui/material';
 
 const CardGridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 500px);
-  grid-gap: 1em;
+  grid-template-columns: repeat(2, 460px);
+  grid-gap: 2em;
 `;
 
 const RecipeMenuContainer = styled(Container)`

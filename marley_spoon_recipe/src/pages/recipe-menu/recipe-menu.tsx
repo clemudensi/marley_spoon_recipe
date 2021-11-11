@@ -1,12 +1,12 @@
 import { VFC } from 'react';
 import { useQuery, UseQueryResult } from 'react-query';
 import { RecipeMenuCard } from '../../components'
-import { getRecipe } from '../../api';
+import { getRecipes } from '../../api';
 import { CardGridContainer, RecipeMenuContainer } from './styles';
 import { Recipe } from '../../types';
 
 const RecipeMenu: VFC = () => {
-    const { data }: UseQueryResult<Recipe[]> = useQuery('recipe', getRecipe);
+    const { data }: UseQueryResult<Recipe[]> = useQuery('recipe', getRecipes);
     return (
         <>
             <RecipeMenuContainer>
@@ -18,6 +18,7 @@ const RecipeMenu: VFC = () => {
                                 title={fields.title}
                                 tags={fields.tags}
                                 photo={fields.photo}
+                                sys={sys}
                             />
                         ))
                     }
