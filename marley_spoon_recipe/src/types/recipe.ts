@@ -1,8 +1,12 @@
-interface Recipe {
+interface RecipeFields {
     title: string;
-    calories: number;
-    description: string;
-    tags: [];
+    calories?: number;
+    description?: string;
+    tags: {
+        fields: {
+            name: string;
+        };
+    }[];
     photo: {
         fields: {
             title: string;
@@ -25,4 +29,26 @@ interface Recipe {
     }
 }
 
-export type { Recipe };
+interface Recipe {
+    fields: RecipeFields;
+    metadata?: {
+        tags: []
+    };
+    sys: {
+        id: string;
+    }
+}
+
+interface RecipeResponse {
+    includes?: {
+        Entry: [],
+        Asset: [],
+    };
+    items: Recipe[];
+    limit?: number;
+    skip?: number;
+    sys?: [];
+    total?: number
+}
+
+export type { Recipe, RecipeFields, RecipeResponse };
